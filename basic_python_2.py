@@ -46,7 +46,7 @@ stroka = "abcdefghij"
 
 print(len(stroka))
 print(stroka[0])
-print(stroka[9])
+print(stroka[-1])
 print(stroka[2])
 print(stroka[-3])
 
@@ -56,10 +56,13 @@ print(stroka[-3])
 print(stroka[0:8])
 
 # ● четыре символа из центра строки
-print(stroka[3:7])
+
+line_str = len(stroka)//2
+nrw = stroka[line_str-2: line_str+2]
+print(nrw)
 
 # ● символы с индексами кратными трем
-print(stroka[0:len(stroka):3])
+print(stroka[::3])
 
 # ● переверните строку
 print(stroka[::-1])
@@ -113,7 +116,9 @@ print(new_list)
 # обоих первых списков. Срез свяжите с очередной новой переменной. Выведите
 # значение этой переменной.
 
-s = new_list[2:6]
+
+s = new_list[-(len(list_two))-1:-(len(list_two))+2]
+print(s)
 print(s)
 
 # 6. Добавьте в список два новых элемента и снова выведите его.
@@ -250,8 +255,8 @@ print(ten_lst)
 # соответствующую позицию(1-я позиция для 1-ого словаря, вторая для 2-ого)
 # ab = {'a': [1, None], 'b': [2, None], 'c': [3, 3], 'd': [None, 4], 'e': [None, 5]}
 
-aa = { 'a': 1, 'b': 2, 'c': 3}
-bb = { 'c': 3, 'd': 4,'e': 5}
+aa = {'a': 1, 'b': 2, 'c': 3}
+bb = {'c': 3, 'd': 4, 'e': 5}
 
 ab = {}
 for key in aa:
@@ -286,7 +291,7 @@ print("*******Условия:******")
 numb = -15
 
 if numb > 0:
-    numb+=1
+    numb += 1
 else:
     print(numb)
 
@@ -299,11 +304,11 @@ n3 = -3
 counter = 0
 
 if n1 > 0:
-    counter+=1
+    counter += 1
 if n2 > 0:
-    counter+=1
+    counter += 1
 if n3 > 0:
-    counter+=1
+    counter += 1
 
 print(counter)
 
